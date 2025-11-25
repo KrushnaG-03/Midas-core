@@ -1,0 +1,19 @@
+### Test Valid Transaction
+POST http://localhost:8080/midas/create
+Content-Type: application/json
+
+{
+  "senderId": 1,
+  "recipientId": 2,
+  "amount": 100.0
+}
+
+Test Invalid Transaction (Should Fail)
+POST http://localhost:8080/midas/create
+Content-Type: application/json
+
+{
+  "senderId": 1,
+  "recipientId": 2,
+  "amount": -500.0
+}
